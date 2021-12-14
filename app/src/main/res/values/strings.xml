@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">NikosShopingCart</string>
+    <string name="login_title">Login to your Account</string>
+    <string name="username_hint">Username or Email</string>
+    <string name="password_hint">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="forgot_your_password_hint">Forgot your password?</string>
+    <string name="shoplist_title">List of Products</string>
+    <string name="btn_logout">Logout</string>
+    <string name="product_default_title">Title</string>
+    <string name="product_default_description">Description</string>
+    <string name="product_share">Share Product</string>
+
+</resources>

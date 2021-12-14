@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="products">
+        <item>Chips</item>
+        <item>Soda</item>
+        <item>Chocolate</item>
+        <item>Cookies</item>
+        <item>IceCream</item>
+    </string-array>
+
+    <integer-array name="product_images">
+        <item>@drawable/product_chips</item>
+        <item>@drawable/product_soda</item>
+        <item>@drawable/product_chocolate</item>
+        <item>@drawable/product_cookies</item>
+        <item>@drawable/product_icecream</item>
+    </integer-array>
+
+    <string-array name="product_descriptions">
+        <item>150g bag of Lays Oregano chips</item>
+        <item>One liter of Coca cola</item>
+        <item>100g bar of Milka hazelnut chocolate</item>
+        <item>200g box of Papadopoulou chocolate cookies</item>
+        <item>180g cup of Magnum double salted caramel ice cream</item>
+    </string-array>
+
+    <string-array name="full_product_descriptions">
+        <item>Description: 150g bag of Lays Oregano chips. The cost of the item is 1,50 euro. Vegan friendly. Popular item among our customers. Five different flavors also available on our store.</item>
+        <item>Description: One liter of Coca cola. The cost of the item is 2,00 euro. Vegan friendly. Highly Popular item among our customers. Three different flavors also available on our store.</item>
+        <item>Description: 100g bar of Milka hazelnut chocolate. The cost of the item is 1,65 euro. Mediium popularity item among our customers. Ten different flavors also available on our store.</item>
+        <item>Description: 200g box of Papadopoulou chocolate cookies.  The cost of the item is 2,50 euro. Highly Popular item among our customers. Four different flavors also available on our store.</item>
+        <item>Description: 180g cup of Magnum double salted caramel ice cream.  The cost of the item is 4,00 euro. Popular item among our customers. Two different flavors also available on our store.</item>
+    </string-array>
+
+</resources>

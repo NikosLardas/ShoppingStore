@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/main_login_txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/login_title"
+        android:textColor="#EF6C00"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/main_login_edit_txt_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="@string/username_hint"
+        android:minHeight="48dp"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/main_login_edit_txt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/main_login_btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#EF6C00"
+        android:text="@string/btn_login"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/main_login_txt_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/forgot_your_password_hint"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="15sp"
+        android:focusable="true" />
+
+</LinearLayout>
