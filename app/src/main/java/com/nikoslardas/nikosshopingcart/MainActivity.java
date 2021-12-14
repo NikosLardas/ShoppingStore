@@ -43,7 +43,6 @@ public class MainActivity extends AbstractActivity {
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = getIntent();
                 Toast.makeText(v.getContext(),"Please contact the Main Administrator to reset your password",Toast.LENGTH_SHORT).show();
             }
         });

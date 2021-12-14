@@ -7,13 +7,12 @@ import android.content.Intent;
 
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.nikoslardas.nikosshopingcart.productsrecyclerview.ProductsRecyclerViewAdapter;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -42,21 +41,17 @@ public class SecondActivity extends AbstractActivity {
         ProductsRecyclerViewAdapter adapter = new ProductsRecyclerViewAdapter(getDataList(), new ProductsRecyclerViewAdapter.Listener() {
 
             @Override
-            public void onItemClick(View view, String data) {
+            public void onItemClick(View view, Product data) {
 
                 TextView title = view.findViewById(R.id.product_item_title_txt);
                 String productTitle = title.getText().toString();
 
-                ImageView img = view.findViewById(R.id.product_item_img);
-                int imgSrc = (int) img.getTag();
-
-                String[] prodArray = getResources().getStringArray(R.array.products);
-                String[] prodDescArray = getResources().getStringArray(R.array.full_product_descriptions);
+                int imgSrc = data.getProductImage();
 
                 Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
                 intent.putExtra("title",productTitle);
                 intent.putExtra("image", imgSrc);
-                intent.putExtra("full_description", prodDescArray[Arrays.asList(prodArray).indexOf(data)]);
+                intent.putExtra("full_description",data.getProductFullDescription());
                 startActivity(intent);
             }
         });
@@ -64,9 +59,14 @@ public class SecondActivity extends AbstractActivity {
         recyclerView.setAdapter(adapter);
     }
 
-    private List<String> getDataList() {
-        String[] prodArray = getResources().getStringArray(R.array.products);
-        List<String> products = Arrays.asList(prodArray);
+    private List<Product> getDataList() {
+
+        List<Product> products = new ArrayList<>();
+
+        for(int i = 0; i < 5; i++) {
+            Product prod = new Product(i,this);
+            products.add(prod);
+        }
 
         return products;
     }

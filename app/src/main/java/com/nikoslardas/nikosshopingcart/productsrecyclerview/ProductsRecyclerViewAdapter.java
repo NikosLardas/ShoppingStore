@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.nikoslardas.nikosshopingcart.Product;
 import com.nikoslardas.nikosshopingcart.R;
 
 import java.util.List;
@@ -14,14 +15,14 @@ import java.util.List;
 public class ProductsRecyclerViewAdapter extends RecyclerView.Adapter<ProductsRecyclerViewHolder>{
 
     public interface Listener {
-        void onItemClick(View view, String data);
+        void onItemClick(View view, Product data);
     }
 
     @NonNull
-    private List<String> products;
+    private List<Product> products;
     private Listener callback;
 
-    public ProductsRecyclerViewAdapter(List<String> arrayData, Listener callback) {
+    public ProductsRecyclerViewAdapter(List<Product> arrayData, Listener callback) {
         this.products = arrayData;
         this.callback = callback;
     }
@@ -36,7 +37,7 @@ public class ProductsRecyclerViewAdapter extends RecyclerView.Adapter<ProductsRe
 
     @Override
     public void onBindViewHolder(@NonNull ProductsRecyclerViewHolder holder, int position) {
-        String data = products.get(position);
+        Product data = products.get(position);
         holder.bindData(data);
     }
 
